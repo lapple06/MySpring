@@ -27,11 +27,11 @@ BeanDefinitionRegistry
 ## 6.灵活配置，ConfigurableBeanFactory
 之前获取classLoader时都是写死了一个，现在希望做到可配置，留一个可扩展的口子让子类去实现。但是由于BeanFactory是顶层接口，不希望暴露这些扩展的方法
 给外部，于是可以抽象多一层
-![image](https://github.com/lapple06/MySpring/raw/b_bean_factory/uml/BeanFactory/beanFactory_6_ConfigurableBeanFactory.jpg)
+![image](https://github.com/lapple06/MySpring/raw/b_bean_factory/uml/BeanFactory/beanFactory_6_ConfigurableBeanFactory.jpg)<br/>
 以后有一些属性不希望写死，直到子类或者留给外部去决定，这些属性可以往ConfigurableBeanFactory接口中添加。（此处的实现和Spring的实现稍有不同）
 
 ## 7.Spring的Scope实现，提炼SingleltonBeanRegistry接口
-SingleltonBeanRegistry接口提供了实现Singleton的能力，默认实现是DefaultSingletonBeanRegistry，此对象保存所有bean的单例。
+SingleltonBeanRegistry接口提供了实现Singleton的能力，默认实现是DefaultSingletonBeanRegistry，此对象保存所有bean的单例。<br/>
 ![image](https://github.com/lapple06/MySpring/raw/b_bean_factory/uml/BeanFactory/beanFactory_7_SingleltonBeanRegistry.jpg)
 
 ## 8.总的类图
